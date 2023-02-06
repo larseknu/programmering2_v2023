@@ -1,0 +1,28 @@
+@startuml
+
+class Figur {
+   + areal(): int
+   + omkrets(): int
+   + erStorre(figur: Figur): boolean
+   + {static} erStorre(figur1: Figur, figur2: Figur): boolean
+}
+
+class Sirkel extends Figur {
+    - radius: int
+    + areal() : int
+    + omkrets() : int
+    + beregnDiameter() : int
+}
+
+class Rektangel extends Figur {
+    - side1: int
+    - side2: int
+    + areal() : int
+    + omkrets() : int
+}
+
+class Kvadrat extends Rektangel {
+    - side: int
+}
+
+@enduml

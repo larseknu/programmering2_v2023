@@ -1,0 +1,23 @@
+@startuml
+
+Kurs <-- Student
+
+
+class Student {
+    - fornavn: String
+    - etternavn: String
+    - fodselsdato: LocalDate
+    - kurs: Kurs
+    - studentId: String
+    + getAlder(): int
+}
+
+
+
+class Kurs {
+    - kode: String
+    - beskrivelse: String
+    - studiePoeng: int
+}
+
+@enduml

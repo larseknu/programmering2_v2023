@@ -1,0 +1,28 @@
+@startuml
+
+Student o-- Kurs
+
+class Person {
+    - fornavn: String
+    - etternavn: String
+    - fodselsdato: LocalDate
+}
+
+class Ansatt extends Person {
+    - ansattId: String
+}
+
+class Student extends Person {
+    - kurs: ArrayList<Kurs>
+    - studentId: String
+    + getAlder(): int
+}
+
+
+class Kurs {
+    - kode: String
+    - beskrivelse: String
+    - studiePoeng: int
+}
+
+@enduml

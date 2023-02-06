@@ -1,0 +1,23 @@
+@startuml
+
+TVSerie o-- Episode
+
+class TVSerie {
+    - tittel: String
+    - beskrivelse: String
+    - utgivelsesDato: LocalDate
+    - episoder: ArrayList<Episode>
+    - gjennomsnittligSpilletid: int
+    + leggTilEpisode(nyEpisode: Episode): void
+    + hentEpiusoderISesong(sesongNr: int): ArrayList<Episode>
+    - oppdaterGjennomsnittligSpilletid(): void
+}
+
+class Episode {
+    - tittel: Stirng
+    - episodeNr: int
+    - sesongNr: int
+    - spilletid: int
+}
+
+@enduml

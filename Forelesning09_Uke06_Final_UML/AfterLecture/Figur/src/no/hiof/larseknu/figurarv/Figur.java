@@ -14,11 +14,11 @@ public class Figur {
         return 0;
     }
 
-    public double arealIMeter() {
-        return areal() / CM_TIL_METER;
+    public final double arealIMeter() {
+        return areal() / Math.pow(CM_TIL_METER, 2);
     }
 
-    public double omkretsIMeter() {
+    public final double omkretsIMeter() {
         return omkrets() / CM_TIL_METER;
     }
 

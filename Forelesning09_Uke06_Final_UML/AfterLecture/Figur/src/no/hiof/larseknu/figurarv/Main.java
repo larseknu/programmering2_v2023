@@ -31,6 +31,6 @@ public class Main {
         // Skriver ut en linje med * for å skille på utskriftene i terminalen
         System.out.println("\n*************Data i meter************");
         System.out.printf("%s sitt areal: %.2f og omkrets: %.2f%n", rektangelet, rektangelet.areal(), rektangelet.omkrets());
-        System.out.printf("%s sitt areal i meter: %.2f og omkrets i meter: %.2f%n", rektangelet, rektangelet.arealIMeter(), rektangelet.omkretsIMeter());
+        System.out.printf("%s sitt areal i kvadratmeter: %.4f og omkrets i meter: %.2f%n", rektangelet, rektangelet.arealIMeter(), rektangelet.omkretsIMeter());
     }
 }

@@ -1,0 +1,36 @@
+@startuml
+
+Figur <|-- Sirkel
+Figur <|-- Rektangel
+Rektangel <|-- Kvadrat
+
+
+class Figur {
+    {static} - CM_TIL_METER: int
+    + areal(): double
+    + omkrets(): double
+    + arealIMeter(): double
+    + omkretsIMeter(): double
+    + erStorre(annenFigur: Figur): boolean
+    + {static} erStorre(figur1: Figur, figur2: Figur): boolean
+}
+
+class Sirkel {
+    - radius: double
+    + areal(): double
+    + omkrets(): double
+    + beregnDiameter(): double
+}
+
+class Rektangel {
+    - side1: double
+    - side2: double
+    + areal(): double
+    + omkrets(): double
+}
+
+class Kvadrat {
+    - side: double
+}
+
+@enduml

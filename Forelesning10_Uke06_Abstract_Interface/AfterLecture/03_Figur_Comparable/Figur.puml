@@ -1,0 +1,42 @@
+@startuml
+
+Tegnbar <|.. Figur
+Comparable <|.. Figur
+Figur <|-- Sirkel
+Figur <|-- Rektangel
+Rektangel <|-- Kvadrat
+
+interface Comparable {
+    {abstract} + compareTo(): int
+}
+
+interface Tegnbar {
+    {abstract} + tegn(): void
+}
+
+abstract class Figur {
+    - farge: String
+    {static} - CM_TIL_METER: int
+    {abstract} + areal(): double
+    {abstract} + omkrets(): double
+    + arealIMeter(): double
+    + omkretsIMeter(): double
+    + erStorre(annenFigur: Figur): boolean
+    + {static} erStorre(figur1: Figur, figur2: Figur): boolean
+}
+
+class Sirkel {
+    - radius: double
+    + beregnDiameter(): double
+}
+
+class Rektangel {
+    - side1: double
+    - side2: double
+}
+
+class Kvadrat {
+    - side: double
+}
+
+@enduml

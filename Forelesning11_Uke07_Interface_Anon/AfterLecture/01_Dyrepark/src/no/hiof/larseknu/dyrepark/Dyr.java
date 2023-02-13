@@ -3,7 +3,7 @@ package no.hiof.larseknu.dyrepark;
 import java.time.LocalDate;
 
 public abstract class Dyr implements Comparable<Dyr> {
-    private int id;
+    private final int id;
     private String navn;
     private LocalDate fodselsDato;
     private static int dyreTeller;
@@ -20,10 +20,6 @@ public abstract class Dyr implements Comparable<Dyr> {
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNavn() {

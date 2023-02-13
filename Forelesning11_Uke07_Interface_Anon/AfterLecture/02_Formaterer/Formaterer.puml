@@ -1,0 +1,12 @@
+@startuml
+
+interface Formaterer {
+    + formaterTekst(tekst: String): String
+}
+
+class StorTekstFormaterer implements Formaterer
+class LitenTekstFormaterer implements Formaterer
+class CamelCaseFormaterer implements Formaterer
+class TilfeldigFormaterer implements Formaterer
+
+@enduml

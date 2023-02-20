@@ -1,0 +1,33 @@
+@startuml
+
+Dyrepark o-- Dyr
+Comparable <|.. Dyr
+
+interface Comparable<Dyr> {
+    + compareTo(Dyr dyret): int
+}
+
+class Dyrepark {
+    - navn: String
+    - dyreListe: ArrayList<Dyr>
+}
+
+class Dyr {
+    - ID: int
+    - navn: String
+    - fodselsDato: LocalDate
+    - dyreTeller: int
+}
+
+class Sjimpanse extends Dyr {
+    - iq: int
+}
+
+class HonningGrevling extends Dyr {
+    - antallSlangerDrept: int
+}
+
+class Panda extends Dyr {
+    - kongFuBelteFarge: String
+}
+@enduml

@@ -7,12 +7,9 @@ import io.javalin.config.JavalinConfig;
 import io.javalin.http.Context;
 import io.javalin.http.Handler;
 import io.javalin.vue.VueComponent;
-import no.hiof.larseknu.hellojavalin.controller.DyreparkController;
 import no.hiof.larseknu.hellojavalin.model.Dyr;
 import no.hiof.larseknu.hellojavalin.model.Panda;
 import no.hiof.larseknu.hellojavalin.model.Sjimpanse;
-import no.hiof.larseknu.hellojavalin.repository.DyreparkDataRepository;
-import no.hiof.larseknu.hellojavalin.repository.DyreparkRepository;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDate;
@@ -34,14 +31,15 @@ public class Application {
 
         app.get("/dyrepark/{dyrepark-id}", new VueComponent("dyrepark-detail"));
 
-        DyreparkRepository dyreparkRepository = new DyreparkDataRepository();
-        DyreparkController dyreparkController = new DyreparkController(dyreparkRepository);
-
+        
+        ArrayList<Dyr> dyreListe =new ArrayList<>();
+        dyreListe.add(new Sjimpanse("Julius", LocalDate.now(), 50));
+        dyreListe.add(new Panda("Turid", LocalDate.now(), "Hvit"));
         // API
         app.get("api/dyrepark/{dyrepark-id}", new Handler() {
             @Override
             public void handle(Context ctx) throws Exception {
-                dyreparkController.getAlleDyr(ctx);
+                ctx.json(dyreListe);
             }
         });
     }

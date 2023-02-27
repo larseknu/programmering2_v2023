@@ -11,16 +11,10 @@ public class Dyrepark {
         dyreListe = new ArrayList<>();
     }
 
-    public String getNavn() {
-        return navn;
-    }
-
-    public void setNavn(String navn) {
-        this.navn = navn;
-    }
     public void leggTilDyrIDyrepark(Dyr dyret) {
         dyreListe.add(dyret);
     }
+
     public ArrayList<Dyr> getDyreListe() {
         return new ArrayList<>(dyreListe);
     }

@@ -2,7 +2,7 @@
   <h1>Dyr i {{parkNavn}}</h1>
   <ul>
     <li v-for="dyr in dyreListe">
-      <h2>{{dyr.id + " - " + dyr.navn}}</h2>
+      <a :href="`/dyrepark/${parkNavn}/dyr/${dyr.id}`"><h2>{{dyr.id + " - " + dyr.navn}}</h2></a>
     </li>
   </ul>
 

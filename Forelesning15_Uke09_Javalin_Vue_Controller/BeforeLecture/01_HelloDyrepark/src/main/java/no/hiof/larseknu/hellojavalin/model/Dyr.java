@@ -3,7 +3,7 @@ package no.hiof.larseknu.hellojavalin.model;
 import java.time.LocalDate;
 
 public abstract class Dyr implements Comparable<Dyr> {
-    private String navn, art;
+    private String navn;
     private final int id;
     private LocalDate fodselsdag;
     private static int dyreTeller = 0;
@@ -17,7 +17,6 @@ public abstract class Dyr implements Comparable<Dyr> {
 
     @Override
     public int compareTo(Dyr dyret) {
-        //return this.id - dyret.getId();
         return navn.compareTo(dyret.getNavn());
     }
 
@@ -32,10 +31,6 @@ public abstract class Dyr implements Comparable<Dyr> {
     public int getId() {
         return id;
     }
-
-    /*public LocalDate getFodselsdag() {
-        return fodselsdag;
-    }*/
 
     public void setFodselsdag(LocalDate fodselsdag) {
         this.fodselsdag = fodselsdag;

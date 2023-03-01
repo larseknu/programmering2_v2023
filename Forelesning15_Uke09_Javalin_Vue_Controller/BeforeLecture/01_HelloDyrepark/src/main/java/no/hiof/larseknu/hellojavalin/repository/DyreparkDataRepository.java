@@ -9,7 +9,7 @@ public class DyreparkDataRepository implements DyreparkRepository{
     private ArrayList<Dyrepark> dyreparkListe = new ArrayList<>();
 
     public DyreparkDataRepository() {
-        createData();
+
     }
 
     private void createData() {
@@ -35,23 +35,4 @@ public class DyreparkDataRepository implements DyreparkRepository{
         dyreparkListe.add(boraasDjurpark);
     }
 
-    @Override
-    public ArrayList<Dyr> getDyrIDyrepark(String dyreparkNavn) {
-        for (Dyrepark dyrepark : dyreparkListe) {
-            if (dyrepark.getNavn().equals(dyreparkNavn))
-                return dyrepark.getDyreListe();
-        }
-
-        return new ArrayList<>();
-    }
-
-    @Override
-    public Dyrepark getDyrepark(String dyreparkNavn) {
-        return null;
-    }
-
-    @Override
-    public Dyr getDyr(String dyreparkNavn, int id) {
-        return null;
-    }
 }

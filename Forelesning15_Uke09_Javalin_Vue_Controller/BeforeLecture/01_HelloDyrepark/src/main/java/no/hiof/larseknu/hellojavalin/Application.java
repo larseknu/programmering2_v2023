@@ -23,24 +23,10 @@ import java.util.function.Consumer;
 public class Application {
     public static void main(String[] args) {
         Javalin app = Javalin.create(config -> {
-            config.staticFiles.enableWebjars();
-            config.vue.vueAppName = "app";
-        }).start(8181);
-
-        app.get("/", new VueComponent("hello-world"));
-
-        app.get("/dyrepark/{dyrepark-id}", new VueComponent("dyrepark-detail"));
-
-        DyreparkRepository repository = new DyreparkDataRepository();
-        DyreparkController dyreparkController = new DyreparkController(repository);
+                config.staticFiles.enableWebjars();
+                config.vue.vueAppName = "app";
+       }).start(8181);
 
 
-        // API
-        app.get("api/dyrepark/{dyrepark-id}", new Handler() {
-            @Override
-            public void handle(Context ctx) throws Exception {
-                dyreparkController.getDyrIDyrepark(ctx);
-            }
-        });
     }
 }

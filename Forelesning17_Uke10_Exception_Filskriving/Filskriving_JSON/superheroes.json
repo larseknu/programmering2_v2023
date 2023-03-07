@@ -1,0 +1,10 @@
+[ {
+  "name" : "Batman",
+  "alterEgo" : "Bruce Wayne"
+}, {
+  "name" : "The Hulk",
+  "alterEgo" : "Bruce Banner"
+}, {
+  "name" : "Superman",
+  "alterEgo" : "Clark Kent"
+} ]

@@ -1,0 +1,23 @@
+[ {
+  "name" : "Saeris",
+  "characterClass" : {
+    "type" : "wizard",
+    "name" : "Divination Wizard",
+    "description" : "A magic user who sees the future",
+    "dice" : 6,
+    "spells" : [ "Fireball", "Prestidigitation" ]
+  },
+  "level" : 13,
+  "created" : [ 2016, 3, 3 ]
+}, {
+  "name" : "Trok",
+  "characterClass" : {
+    "type" : "barbarian",
+    "name" : "Berserker Barbarian",
+    "description" : "Hits stuff",
+    "dice" : 12,
+    "rages" : 3
+  },
+  "level" : 10,
+  "created" : [ 2016, 3, 3 ]
+} ]

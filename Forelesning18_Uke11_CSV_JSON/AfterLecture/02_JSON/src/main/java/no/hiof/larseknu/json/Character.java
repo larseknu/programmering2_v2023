@@ -1,5 +1,7 @@
 package no.hiof.larseknu.json;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.time.LocalDate;
 
 public class Character {
@@ -18,6 +20,7 @@ public class Character {
         this.created = created;
     }
 
+    @JsonProperty("navn")
     public String getName() {
         return name;
     }

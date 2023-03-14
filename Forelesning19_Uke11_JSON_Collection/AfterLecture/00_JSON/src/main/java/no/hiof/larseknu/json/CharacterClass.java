@@ -3,12 +3,10 @@ package no.hiof.larseknu.json;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
-@JsonTypeInfo(
-        use = JsonTypeInfo.Id.NAME,
-        property = "type")
+@JsonTypeInfo(use=JsonTypeInfo.Id.DEDUCTION)
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = Wizard.class, name = "wizard"),
-        @JsonSubTypes.Type(value = Barbarian.class, name = "barbarian")
+        @JsonSubTypes.Type(Wizard.class),
+        @JsonSubTypes.Type(Barbarian.class)
 })
 public abstract class CharacterClass {
     private String name, description;

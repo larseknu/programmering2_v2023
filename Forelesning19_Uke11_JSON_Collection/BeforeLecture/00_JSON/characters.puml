@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+CharacterClass <-- Character
+
+class Wizard extends CharacterClass {
+    spells: List<String>
+}
+
+class Barbarian extends CharacterClass {
+    rages: int
+}
+
+abstract class CharacterClass {
+    name: String
+    description: String
+    dice: int
+}
+
+class Character {
+    name: String
+    level: int
+    created: LocalDate
+    characterClass: CharacterClass
+}
+@enduml

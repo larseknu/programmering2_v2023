@@ -15,7 +15,8 @@ public class Deck {
 
         for (Card.Suit cardSuit : Card.Suit.values()) {
             for (CardValue value : CardValue.values()) {
-                currentDeck.add(new Card(cardSuit, value));
+                if (value != CardValue.JOKER)
+                    currentDeck.add(new Card(cardSuit, value));
             }
         }
     }

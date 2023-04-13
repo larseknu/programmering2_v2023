@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"no.hiof.larseknu.game","l":"PlayerCharacter"}];updateSearchResults();
